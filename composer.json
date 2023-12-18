@@ -1,0 +1,17 @@
+{
+    "name": "stilliard/generic-loading-bar",
+    "description": "Generic loading bar PHP component",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Stilliard",
+            "email": "andrew.stilliard@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "GLB\\": "src"
+        }
+    },
+    "require": {}
+}

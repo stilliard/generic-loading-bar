@@ -59,7 +59,8 @@ foreach ($products as $i => $product) {
 ### Data Handlers
 
 - **Process** `ProcessDataHandler` runs just in process and doesn't save anywhere
-- **PDO** `PDODataHandler` lets you pass a DB PDO object in via the construct options to then query an assumed `loading_bars` table with `name` and `value` columns.
+- **Redis** `RedisDataHandler` uses redis to store the current loading % 
+- **PDO** `PDODataHandler` uses a database with a PDO instance, lets you pass a DB PDO instance/object in via the construct options to then query an assumed `loading_bars` table with `name` and `value` columns.
 - **DB** `DBDataHandler` like above PDO one but instead of passing a `pdo` instance, it assumes you have a `DB` global class
 
 Build your own by extending the abstract `BaseDataHandler` class, see how the above ones work as an example in the `src/DataHandler` folders.

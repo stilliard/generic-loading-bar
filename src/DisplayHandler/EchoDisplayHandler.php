@@ -7,6 +7,8 @@ class EchoDisplayHandler extends BaseDisplayHandler
     public function display(int $value): string
     {
         // display as a percentage
-        return $value / $this->options['max'] * 100 . '%';
+        $current = ($value - $this->options['min']);
+        $total = ($this->options['max'] - $this->options['min']);
+        return round($current / $total * 100) . '%';
     }
 }

@@ -28,8 +28,8 @@ class LoadingBar
     {
         $this->options = array_merge(static::$defaultOptions, $options);
 
-        $this->dataHandler = $this->setDataHandler($this->options['dataHandler']);
-        $this->displayHandler = $this->setDisplayHandler($this->options['displayHandler']);
+        $this->setDataHandler($this->options['dataHandler'] ?? $this->defaultDataHandler);
+        $this->setDisplayHandler($this->options['displayHandler'] ?? $this->defaultDisplayHandler);
     }
 
     public function get(): int
@@ -41,7 +41,7 @@ class LoadingBar
     {
         $value = min($value, $this->options['max']);
         $value = max($value, $this->options['min']);
-        $this->dataHandler->set($value);
+        $this->dataHandler->set(round($value));
     }
 
     public function step(): int

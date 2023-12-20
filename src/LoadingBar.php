@@ -62,6 +62,21 @@ class LoadingBar
         $this->set($this->options['min']);
     }
 
+    public function isComplete(): bool
+    {
+        return $this->get() >= $this->options['max'];
+    }
+
+    public function isRunning(): bool
+    {
+        return $this->get() > $this->options['min'] && $this->get() < $this->options['max'];
+    }
+
+    public function isReset(): bool
+    {
+        return $this->get() <= $this->options['min'];
+    }
+
     public function calc(array $range, array $current): void
     {
         $value = ($range[1] - $range[0]) / $current[1] * $current[0];

@@ -58,7 +58,7 @@ foreach ($products as $i => $product) {
 
 ### Demo
 
-Check out the `demo` folder for a basic CLI demo in `cli.php`, or a full web and background process demo using the Redis data handler in the `html` folder, there's a `README.md` file in there with more information.
+Check out the `demo` folder for a basic CLI demo in `cli.php`, or a full web and background process demo using the Redis data handler in the `html` folder, there's a [`README.md`](https://github.com/stilliard/generic-loading-bar/tree/main/demo/html) file in there with more information.
 
 ### Data Handlers
 

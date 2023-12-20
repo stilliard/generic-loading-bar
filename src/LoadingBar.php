@@ -64,9 +64,8 @@ class LoadingBar
 
     public function calc(array $range, array $current): void
     {
-        $value = $this->get();
-        $value += ($range[1] - $range[0]) / $current[1] * ($current[0] + 1);
-        $this->set($value);
+        $value = ($range[1] - $range[0]) / $current[1] * $current[0];
+        $this->set($range[0] + round($value));
     }
 
     public function display(): string

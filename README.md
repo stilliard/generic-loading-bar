@@ -51,8 +51,8 @@ Want to split your loading into 4 parts, each with 25% but then have maybe thous
 ```php
 $totalProducts = count($products);
 foreach ($products as $i => $product) {
-    // fill in the range between 25% to 50% as the % of the total products handled so far. [index, total] (we auto +1 to the index)
-    $loading->calc([25, 50], [$i, $totalProducts]);
+    // fill in the range between 25% to 50% as the % of the total products handled so far. [index, total]
+    $loading->calc([25, 50], [$i + 1, $totalProducts]);
 }
 ```
 
